@@ -321,6 +321,8 @@ tasks.register('apiJavadoc', Javadoc) {
 
     options.addStringOption('Xdoclint:all', '')
     options.encoding = 'UTF-8'
+
+    enabled = false
 }
 
 tasks.register('javadocJar', Jar) {
