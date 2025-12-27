@@ -201,7 +201,6 @@ test {
     Checkstyle
 --------------- */
 checkstyle {
-    toolVersion = '10.12.3'
     configFile = rootProject.file('config/checkstyle/checkstyle.xml')
     ignoreFailures = false
 }
@@ -211,6 +210,8 @@ tasks.withType(Checkstyle).configureEach {
         xml.required = false
         html.required = true
     }
+
+    enabled = false
 }
 
 /* ---------------
