@@ -1,0 +1,30 @@
+name: Publish Docs
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up python
+        uses: action/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material mike
+
+      - name: Deploy docs
+        run: |
+          VERSION=${GITHUB_REF_NAME}
+          mike deploy $VERSION stable
+          mike set-default stable

@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: gradle-code-quality
+        name: Gradle Code Quality
+        entry: ./gradlew spotlessApply
+        language: system
+        pass_filenames: false

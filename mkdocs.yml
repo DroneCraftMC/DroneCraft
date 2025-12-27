@@ -1,0 +1,58 @@
+site_name: DroneCraft
+site_description: Documentation for DroneCraft
+repo_url: https://github.com/Dyingday/DroneCraft
+repo_name: dyingday/dronecraft
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+    - content.action.edit
+  palette:
+    scheme: slate
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+
+  - Mod Wiki:
+      - Getting Started: mod/getting_started.md
+      - Blocks: mod/blocks.md
+      - Items: mod/items.md
+      - Mechanics: mod/mechanics.md
+      - FAQ: mod/faq.md
+
+  - API (Addon Developers):
+      - Overview: api/Overview.md
+      - Setup: api/Setup.md
+      - Events: api/Events.md
+      - Data Formats: api/Data Formats.md
+      - Examples: api/Examples.md
+
+  - Internals (Contributors):
+      - Architecture: internals/architecture.md
+      - Worldgen: internals/worldgen.md
+      - Networking: internals/networking.md
+      - Save Format: internals/save_format.md
+
+  - Contributing: contributing.md
+  - Changelog: changelog.md

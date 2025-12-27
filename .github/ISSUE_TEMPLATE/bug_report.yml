@@ -1,0 +1,46 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+labels: [ bug ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the details below.
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod Version
+      placeholder: "e.g. 0.1.2.2"
+    validations:
+      required: true
+
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft Version
+      placeholder: "e.g. 1.21.11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue? Please be detailed, as lack of information may cause this issue to be closed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Crash Reports
+      description: Paste logs or link to a pastebin (if long)

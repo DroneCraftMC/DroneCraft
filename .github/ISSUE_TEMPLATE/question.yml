@@ -1,0 +1,11 @@
+name: Question
+description: Ask a question about usage or development
+labels: [ question ]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Ask your question clearly and concisely
+    validations:
+      required: true
